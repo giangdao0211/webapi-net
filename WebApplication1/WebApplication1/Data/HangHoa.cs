@@ -18,5 +18,10 @@ namespace WebApplication1.Data
         public int? MaLoai { get; set; }
         [ForeignKey("MaLoai")]
         public Loai Loai { get; set; }
+        public ICollection<ChiTietDonHang> chiTietDonHangs { get; set; }
+        public HangHoa()
+        {
+            chiTietDonHangs=new List<ChiTietDonHang>();
+        }
     }
 }
